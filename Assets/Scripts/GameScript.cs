@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameScript : MonoBehaviour {
-	public GameObject movedora, firePower;
+	public GameObject movedora, firePower, padre;
 	private RaycastHit hit;
 	private int powerID = 0;
+	public Button[] powerButs;
 
 	void Start () {
 	
@@ -39,13 +41,18 @@ public class GameScript : MonoBehaviour {
 	}
 
 	void fireTouch(){
-		GameObject moveSphere = Instantiate (firePower, hit.point, Quaternion.identity) as GameObject;
+		Vector3 firePos = new Vector3 (hit.point.x, hit.point.y , hit.point.z);
+		GameObject fire = Instantiate (firePower, firePos, Quaternion.identity) as GameObject;
+		fire.transform.parent = padre.transform;
 	}
 
 	public void botones(int ID){
-		if (ID == powerID)
+		if (ID == powerID) {
+			powerButs[ID-1].GetComponent<Image>().color = Color.white;
 			powerID = 0;
-		else
+		} else {
 			powerID = ID;
+			powerButs[ID-1].GetComponent<Image>().color = Color.green;
+		}
 	}
 }

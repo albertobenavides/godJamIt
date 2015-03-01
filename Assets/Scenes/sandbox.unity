@@ -136,7 +136,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &152458711
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +234,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movedora: {fileID: 164606, guid: 4f9e328d43db6d44c9c93f78b52aeded, type: 2}
-  firePower: {fileID: 184064, guid: a2cfe8cb6d5311245bd32eb29b6f220b, type: 2}
+  firePower: {fileID: 199092, guid: dd102d528a4c2294aad0975ca580954b, type: 2}
+  padre: {fileID: 1207665634}
+  powerButs:
+  - {fileID: 2076162291}
 --- !u!1 &535239761
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +322,7 @@ RectTransform:
   m_Children:
   - {fileID: 2076162290}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -397,7 +400,34 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
+--- !u!1 &1207665634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1207665635}
+  m_Layer: 8
+  m_Name: Padre
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1207665635
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1207665634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1180, y: -.5, z: -1252}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1680533830
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +438,7 @@ GameObject:
   - 4: {fileID: 1680533833}
   - 114: {fileID: 1680533832}
   - 154: {fileID: 1680533831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TerrainData: {fileID: 15600000, guid: 2510264262a53ec4e9b08114bf10b19a, type: 2}
-  m_TreeDistance: 5000
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -451,7 +481,7 @@ MonoBehaviour:
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
   m_CollectDetailPatches: 1
-  m_MaterialTemplate: {fileID: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 41ef72842db75e54292ff2c76cc3ea19, type: 2}
 --- !u!4 &1680533833
 Transform:
   m_ObjectHideFlags: 0
